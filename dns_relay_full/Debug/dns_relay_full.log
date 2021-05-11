@@ -1,0 +1,25 @@
+﻿  analyse.c
+F:\dns_relay_full\dns_relay_full\analyse.c(7,16): warning C4244: “return”: 从“time_t”转换到“long”，可能丢失数据
+F:\dns_relay_full\dns_relay_full\analyse.c(73,32): warning C4244: “=”: 从“time_t”转换到“long”，可能丢失数据
+F:\dns_relay_full\dns_relay_full\analyse.c(92,75): warning C4028: 形参 6 与声明不同
+F:\dns_relay_full\dns_relay_full\analyse.c(128,22): warning C4018: “<”: 有符号/无符号不匹配
+  cache.c
+F:\dns_relay_full\dns_relay_full\cache.c(12,14): warning C4477: “fscanf”: 格式字符串“%d”需要类型“int *”的参数，但可变参数 1 拥有了类型“UINT16 *”
+F:\dns_relay_full\dns_relay_full\cache.c(12,14): message : 请考虑在格式字符串中使用“%hd”
+  debugOutput.c
+F:\dns_relay_full\dns_relay_full\debugOutput.c(68,53): warning C4047: “函数”:“int”与“int *”的间接级别不同
+F:\dns_relay_full\dns_relay_full\debugOutput.c(68,49): warning C4024: “getNAME”: 形参和实参 6 的类型不同
+F:\dns_relay_full\dns_relay_full\debugOutput.c(103,52): warning C4047: “函数”:“int”与“int *”的间接级别不同
+F:\dns_relay_full\dns_relay_full\debugOutput.c(103,48): warning C4024: “getNAME”: 形参和实参 6 的类型不同
+F:\dns_relay_full\dns_relay_full\debugOutput.c(150,70): warning C4047: “函数”:“int”与“int *”的间接级别不同
+F:\dns_relay_full\dns_relay_full\debugOutput.c(150,66): warning C4024: “getNAME”: 形参和实参 6 的类型不同
+  forward.c
+F:\dns_relay_full\dns_relay_full\forward.c(45,86): warning C4047: “函数”:“int”与“int *”的间接级别不同
+F:\dns_relay_full\dns_relay_full\forward.c(45,82): warning C4024: “getNAME”: 形参和实参 6 的类型不同
+  globals.c
+  prama.c
+F:\dns_relay_full\dns_relay_full\prama.c(33,3): warning C4033: “read_ip_domain”必须返回值
+  socket.c
+  正在生成代码...
+F:\dns_relay_full\dns_relay_full\prama.c(45): warning C4716: “read_ip_domain”: 必须返回一个值
+  dns_relay_full.vcxproj -> F:\dns_relay_full\Debug\dns_relay_full.exe
