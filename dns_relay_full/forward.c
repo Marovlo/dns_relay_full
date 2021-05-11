@@ -43,24 +43,6 @@ void forward(void* arg)
 	int temp_int = 12;
 	int num = 0;
 	getNAME(data_to_send.packet, data_to_send.len, &temp_int, readable_domain, 256, &num);
-	//printf("\n\n readable_domain:%s \n\n\n", readable_domain);
-	//data_to_send.packet是请求报
-
-	/*
-	char requset_temp_domain[256];//如果有www.去掉，方便一次性比较
-
-	if (readable_domain[0] == readable_domain[1] && readable_domain[1] == readable_domain[2] \
-		&& readable_domain[2] == 'w' && readable_domain[3] == '.')
-	{
-		int i, j;
-		for (i = 0, j = 4; readable_domain[j] != '\0'; i++, j++)//去掉www.
-		{
-			requset_temp_domain[i] = readable_domain[j];
-		}
-		requset_temp_domain[i] = readable_domain[j];
-	}
-	else strcpy(requset_temp_domain, readable_domain);
-	//*/
 
 	//新加拦截功能，获取到查询包中的domian之后，在ip-domian对照表中查询是否属于需要拦截的对像
 	for (int i = 0; i < ip_domain_num; i++)
@@ -207,36 +189,6 @@ void forward(void* arg)
 		if (FD_ISSET(local_forward_fd, &fds)) //FD_ISSET，该宏判断某个socket是否被select函数标记为可读或可写或出错
 		{
 			len = recvfrom(local_forward_fd, reply.packet, 512, 0, NULL, 0); //这里不需要知道dns服务器的地址啥的，因为都知道了，就直接写null和0
-			//if (flags[No_x_thread] != -1)
-			//{
-			//	int f = flags[No_x_thread];
-			//	Answer answer;
-			//	int pos = 12;
-			//	if (f == -2)
-			//	{
-			//		printf("\n STOP!!!!!! f:%d \n",f);
-			//		reply.packet[3] = 0x83;
-			//	}
-			//	else
-			//	{
-			//		printf("\n CHAGE!!!!!!!!! f:%d \n", f);
-			//		questionExtract(reply.packet, len, &pos, &answer);
-			//		if (reply.packet[3] == 0x83)
-			//		{
-			//			reply.packet[3] = 0x80;
-			//			int tt_pos = pos;
-			//			reply.packet[]
-			//		}
-			//		printf("pos:%d\tlen:%d\n", pos, len);
-			//		while (pos < len)
-			//		{
-			//			printf("pos:%d\tlen:%d\n", pos, len);
-			//			resourceExtract(reply.packet, len, &pos, &answer, f);/**/
-			//		}
-			//	}
-			//	printf("forward.c \n");
-			//	debugOutput(reply.packet, len);
-			//}
 			if (len > 0)
 			{
 				//这里就获得了来自服务器的数据，buf为数组，len为有效长度
