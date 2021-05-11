@@ -18,3 +18,4 @@ UINT8 getRCODE(char packet[], int len);
 void getNAME(char packet[], int len, int* n, char name[], int board, int FLAG_CNAME);
 
 int getTTL(REPLY_DATA* reply, int len, int pos);
+
